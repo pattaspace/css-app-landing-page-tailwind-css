@@ -7,6 +7,78 @@
     <title>Acme App</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
+  <body class="min-h-screen bg-[#f]">
+    <div class="min-h-screen flex flex-col items-center pt-6 pb-16">
+      <!-- Top navigation pill -->
+      <header
+        class="w-full max-w-5xl bg-white/90 backdrop-blur-md shadow-[0_20px_60px_rgba(15,23,42,0.08)] rounded-full px-10 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="relative inline-flex items-center">
+          <span class="text-xl font-semibold tracking-tight text-slate-900"
+            >Acme</span
+          >
+          <!-- Small dot icon above-right of Acme -->
+          <span
+            class="absolute -top-1 -right-2 h-2 w-2 rounded-full bg-indigo-500"
+          ></span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex items-center space-x-10 text-sm font-medium">
+          <a
+            href="#"
+            class="relative text-indigo-500"
+          >
+            Home
+            <!-- Underline for Home -->
+            <span
+              class="absolute left-0 -bottom-1 h-0.5 w-full rounded-full bg-indigo-500"
+            ></span>
+          </a>
+          <a href="#" class="text-slate-600 hover:text-slate-900">Features</a>
+          <a href="#" class="text-slate-600 hover:text-slate-900">Pricing</a>
+          <a href="#" class="text-slate-600 hover:text-slate-900">Contact</a>
+        </nav>
+      </header>
+
+      <!-- Hero section -->
+      <main class="flex-1 flex flex-col items-center justify-center text-center mt-20">
+        <!-- Chip with rainbow icon -->
+        <div
+          class="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-xs font-medium text-slate-600 shadow-[0_10px_30px_rgba(15,23,42,0.06)] mb-8"
+        >
+          <!-- Rainbow icon -->
+          <span
+            class="h-4 w-4 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-indigo-500"
+          ></span>
+          <span>Acme Productivity App</span>
+        </div>
+
+        <!-- Heading -->
+        <h1
+          class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-4"
+        >
+          Boost Your
+          <span
+            class="bg-gradient-to-r from-indigo-500 via-purple-500 to-blue-500 bg-clip-text text-transparent"
+            >Productivity</span
+          >
+        </h1>
+
+        <!-- Subheading -->
+        <p class="max-w-xl text-base md:text-lg text-slate-600 mb-10">
+          Streamline your workflow with our all-in-one productivity app.
+        </p>
+
+        <!-- Call to action button -->
+        <button
+          class="inline-flex items-center justify-center rounded-full bg-slate-900 px-8 py-3 text-sm font-semibold text-white shadow-[0_15px_40px_rgba(15,23,42,0.5)] hover:bg-slate-800 transition-colors"
+        >
+          Start Free Trial
+        </button>
+      </main>
+    </div>
   <body class="bg-[#f6f6fb]">
     <section class="min-h-screen flex items-center justify-center px-6 py-16">
       <div class="max-w-6xl w-full grid gap-6 md:grid-cols-3">
