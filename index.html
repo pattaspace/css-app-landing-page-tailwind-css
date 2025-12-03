@@ -7,11 +7,11 @@
     <title>Acme App</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="min-h-screen bg-[#f]">
-    <div class="min-h-screen flex flex-col items-center pt-6 pb-16">
+  <body class="min-h-screen bg-[#f6f6fb]">
+    <div class="min-h-screen flex flex-col items-center pt-6 pb-16 px-4">
       <!-- Top navigation pill -->
       <header
-        class="w-full max-w-5xl bg-white/90 backdrop-blur-md shadow-[0_20px_60px_rgba(15,23,42,0.08)] rounded-full px-10 py-4 flex items-center justify-between"
+        class="w-full max-w-5xl bg-white/90 backdrop-blur-md shadow-[0_20px_60px_rgba(15,23,42,0.08)] rounded-full px-4 sm:px-6 md:px-10 py-4 flex items-center justify-between relative"
       >
         <!-- Logo -->
         <div class="relative inline-flex items-center">
@@ -24,8 +24,10 @@
           ></span>
         </div>
 
-        <!-- Navigation -->
-        <nav class="flex items-center space-x-10 text-sm font-medium">
+        <!-- Desktop Navigation -->
+        <nav
+          class="hidden md:flex items-center space-x-10 text-sm font-medium text-slate-600"
+        >
           <a
             href="#"
             class="relative text-indigo-500"
@@ -36,14 +38,59 @@
               class="absolute left-0 -bottom-1 h-0.5 w-full rounded-full bg-indigo-500"
             ></span>
           </a>
-          <a href="#" class="text-slate-600 hover:text-slate-900">Features</a>
-          <a href="#" class="text-slate-600 hover:text-slate-900">Pricing</a>
-          <a href="#" class="text-slate-600 hover:text-slate-900">Contact</a>
+          <a href="#" class="hover:text-slate-900">Features</a>
+          <a href="#" class="hover:text-slate-900">Pricing</a>
+          <a href="#" class="hover:text-slate-900">Contact</a>
         </nav>
+
+        <!-- Mobile menu toggle -->
+        <input
+          id="mobile-menu-toggle"
+          type="checkbox"
+          class="peer hidden"
+          aria-hidden="true"
+        />
+
+        <!-- Mobile menu button -->
+        <label
+          for="mobile-menu-toggle"
+          class="md:hidden inline-flex cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white/70 px-3 py-2 text-slate-700 shadow-sm"
+        >
+          <span class="sr-only">Toggle main menu</span>
+          <span class="flex flex-col gap-1">
+            <span class="block h-0.5 w-4 rounded-full bg-slate-700"></span>
+            <span class="block h-0.5 w-4 rounded-full bg-slate-700"></span>
+            <span class="block h-0.5 w-4 rounded-full bg-slate-700"></span>
+          </span>
+        </label>
+
+        <!-- Mobile dropdown menu -->
+        <div
+          class="absolute left-1/2 top-[110%] z-20 hidden w-full max-w-xs -translate-x-1/2 rounded-3xl bg-white/95 p-8 text-center shadow-[0_24px_80px_rgba(15,23,42,0.16)] peer-checked:block"
+        >
+          <a href="#" class="block text-indigo-500 font-medium mb-6 underline"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block text-slate-700 hover:text-slate-900 mb-6"
+            >Features</a
+          >
+          <a
+            href="#"
+            class="block text-slate-700 hover:text-slate-900 mb-6"
+            >Pricing</a
+          >
+          <a href="#" class="block text-slate-700 hover:text-slate-900"
+            >Contact</a
+          >
+        </div>
       </header>
 
       <!-- Hero section -->
-      <main class="flex-1 flex flex-col items-center justify-center text-center mt-20">
+      <main
+        class="flex-1 flex flex-col items-center justify-center text-center mt-16 md:mt-20"
+      >
         <!-- Chip with rainbow icon -->
         <div
           class="inline-flex items-center gap-2 rounded-full bg-white/90 px-5 py-2 text-xs font-medium text-slate-600 shadow-[0_10px_30px_rgba(15,23,42,0.06)] mb-8"
@@ -79,46 +126,4 @@
         </button>
       </main>
     </div>
-  <body class="bg-[#f6f6fb]">
-    <section class="min-h-screen flex items-center justify-center px-6 py-16">
-      <div class="max-w-6xl w-full grid gap-6 md:grid-cols-3">
-        <!-- BOX-1 -->
-        <article class="rounded-3xl bg-sky-100 p-10 shadow-lg">
-          <div class="mb-6 inline-flex items-center justify-center rounded-2xl bg-slate-50 p-4">
-            <img src="./img/box1.png" alt="Rocket icon representing streamlined workflows" class="h-8 w-8" />
-          </div>
-          <h2 class="text-2xl font-semibold text-slate-900">
-            Streamlined Workflows
-          </h2>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600">
-            Automate repetitive tasks and focus on high-impact work with our powerful productivity features.
-          </p>
-        </article>
-        <!-- BOX-2 -->
-        <article class="rounded-3xl bg-indigo-100 p-10 shadow-lg">
-          <div class="mb-6 inline-flex items-center justify-center rounded-2xl bg-slate-50 p-4">
-            <img src="./img/box2.png" alt="Performance chart icon representing fast performance" class="h-8 w-8" />
-          </div>
-          <h2 class="text-2xl font-semibold text-slate-900">
-            Blazing Fast Performance
-          </h2>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600">
-            Experience lightning-fast performance and instant responsiveness with our cutting-edge technology.
-          </p>
-        </article>
-        <!-- BOX-3 -->
-        <article class="rounded-3xl bg-fuchsia-100 p-10 shadow-lg">
-          <div class="mb-6 inline-flex items-center justify-center rounded-2xl bg-slate-50 p-4">
-            <img src="./img/box3.png" alt="imgSmiley" class="h-8 w-8" />
-          </div>
-          <h2 class="text-2xl font-semibold text-slate-900">
-            Intuitive Interface
-          </h2>
-          <p class="mt-3 text-sm leading-relaxed text-slate-600">
-            Our user-friendly interface makes it easy for anyone to streamline their workflow.
-          </p>
-        </article>
-      </div>
-    </section>
-  </body>
 </html>
